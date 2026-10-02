@@ -2,17 +2,153 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <style>
+        :root {
+            --sea: #dfeceb;
+            --ink: #17303f;
+            --tide: #2c6e7f;
+            --sun: #f0b43c;
+            --paper: #f7fbfa;
+            --muted: #4f6672;
+            --line: #c9dcd9;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        a { color: var(--tide); text-underline-offset: 3px; }
+        a:hover { color: var(--ink); }
+        a:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+
+        header {
+            background: var(--sea);
+            padding: clamp(2.5rem, 8vw, 5rem) clamp(1.25rem, 8vw, 6rem) 2.5rem;
+            border-bottom: 8px solid var(--sun);
+        }
+
+        header .course {
+            margin: 0 0 0.5rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 800;
+            font-size: clamp(2.8rem, 11vw, 7rem);
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            max-width: 12ch;
+        }
+
+        header .school {
+            margin: 1.25rem 0 0;
+            font-size: 1.25rem;
+        }
+
+        main {
+            max-width: 48rem;
+            margin: 0 auto;
+            padding: 2rem clamp(1.25rem, 5vw, 2rem) 3rem;
+        }
+
+        h2 {
+            margin: 2rem 0 1rem;
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 1.7rem;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 1.5rem 2rem;
+            margin: 0;
+        }
+
+        .details div {
+            border-left: 4px solid var(--sun);
+            padding-left: 1rem;
+        }
+
+        .details dt {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-weight: 700;
+            color: var(--tide);
+        }
+
+        .details dd {
+            margin: 0;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--line);
+        }
+    </style>
 </head>
 <body>
-    <h1> "Justynne Escalante"</h1>
-    <p1>"at your service"</p1>
-    <p2>"I'm a BSCpE student in President Ramon Magsaysay States University"</p2>
-    <p3>"bading ako"</p3>
-    <p4>"de joke lang"</p4>
-    <p5>"medyo lang"</p5>
-    
 
+    <header>
+        <p class="course">BS Computer Engineering</p>
+        <h1>Justynne Escalante</h1>
+        <p class="school">President Ramon Magsaysay State University</p>
+    </header>
+
+    <main>
+        <h2>Personal information</h2>
+        <dl class="details">
+            <div>
+                <dt>Full name</dt>
+                <dd>Justynne Escalante</dd>
+            </div>
+            <div>
+                <dt>Age</dt>
+                <dd>23 years old</dd>
+            </div>
+            <div>
+                <dt>Birthday</dt>
+                <dd>July 13, 2003</dd>
+            </div>
+            <div>
+                <dt>Sex</dt>
+                <dd>Male</dd>
+            </div>
+            <div>
+                <dt>Address</dt>
+                <dd>South Poblacion, Masinloc, Zambales</dd>
+            </div>
+            <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:justynneescalante@gmail.com">justynneescalante@gmail.com</a></dd>
+            </div>
+        </dl>
+
+        <h2>Education</h2>
+        <dl class="details">
+            <div>
+                <dt>School</dt>
+                <dd>President Ramon Magsaysay State University</dd>
+            </div>
+            <div>
+                <dt>Course</dt>
+                <dd>Bachelor of Science in Computer Engineering (BSCpE)</dd>
+            </div>
+        </dl>
+    </main>
 </body>
 </html>
